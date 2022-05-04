@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Client\ClientController;
+use App\Http\Controllers\Client\QuestionnaireController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,7 +19,7 @@ Route::prefix('executive')->group(function () {
         return redirect()->route('login');
     });
     Auth::routes(['register' => false]);
-});;
+});
 
 
 Route::get('/', function () {
@@ -42,6 +43,11 @@ Route::get('/register',function(){
 })->name('register');
 
 
+Route::prefix('questionnaire')->group(function () {
+    Route::get('/{id}',[QuestionnaireController::class,'index'])->name('questionnaire')->where('id', '[0-9]+');
+    Route::post('/{id}',[QuestionnaireController::class,'store'])->name('storeQuestionnaire')->where('id', '[0-9]+');
+});
+
 Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
 
 Route::group(['middleware' => 'auth'], function () {
@@ -50,6 +56,7 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::put('profile', ['as' => 'profile.update', 'uses' => 'App\Http\Controllers\ProfileController@update']);
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
     Route::resource('client', ClientController::class)->except(['store']);
+    Route::get('client/questionnaire/{id}/{num}',[QuestionnaireController::class,'getQuest'])->name('adminGetQuestionnaire')->where('id', '[0-9]+')->where('num', '[0-9]+');
 });
 
 Route::resource('client', ClientController::class)->only('store');

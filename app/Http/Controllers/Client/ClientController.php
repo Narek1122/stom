@@ -45,8 +45,8 @@ class ClientController extends Controller
      */
     public function store(ClientReq $request)
     {
-        $this->clientServ->store($request->validated());
-        return redirect()->back()->with('message','успех');
+        $data = $this->clientServ->store($request->validated());
+        return redirect()->route('questionnaire',$data['id']);
     }
     /**
      * Display the specified resource.
@@ -58,7 +58,7 @@ class ClientController extends Controller
     {
         $client = $this->clientServ->find($id);
 
-        return view('admin.client.show',compact('client'));
+        return view('admin.client.show',compact('client','id'));
     }
 
     /**

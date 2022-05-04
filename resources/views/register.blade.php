@@ -36,7 +36,10 @@
   </section>
   <!-- header---------------------------------------------------------- -->
 
-  <section class="container">
+  <form action="{{ route('client.store') }}" method="POST">
+    @csrf
+    <input type="text" hidden name="type" id="typeInp">
+    <section class="container">
     <div class="general_information">
         <div class="form--ttl">
             <span>Общие сведения</span>
@@ -45,24 +48,24 @@
       <div class="general_box">
         <div class="general_itm">
           <div class="input_div class1">
-            <input type="text" placeholder="Фамилия *"/>
+            <input type="text" placeholder="Фамилия *" name="surname"/>
           </div>
           <div class="input_div class1">
-              <input type="text" placeholder="Имя *" />
+              <input type="text" placeholder="Имя *" name="name"/>
           </div>
           <div class="input_div class1">
-            <input type="text" placeholder="Отчество *" />
+            <input type="text" placeholder="Отчество *" name="patronymic"/>
           </div>
         </div>
         <div class="general_itm">
           <div class="input_div class2">
-            <input type="date" placeholder="Дата рождения * " />
+            <input type="date" placeholder="Дата рождения * " name="dob"/>
           </div>
           <div class="input_div class2">
-            <input type="number" placeholder="Телефон *" />
+            <input type="number" placeholder="Телефон *" name="phone_number"/>
           </div>
           <div class="input_div class1">
-            <input type="email" placeholder="E-mail" />
+            <input type="email" placeholder="E-mail" name="email"/>
           </div>
         </div>
       </div>
@@ -75,16 +78,16 @@
     <div class="general_box">
       <div class="general_itm">
         <div class="input_div class3">
-          <input type="text" placeholder="Серия *" />
+          <input type="text" placeholder="Серия *" name="passport_series"/>
         </div>
         <div class="input_div class4">
-            <input type="text" placeholder="Номер *" />
+            <input type="text" placeholder="Номер *" name="passport_number"/>
           </div>
         <div class="input_div class5">
-          <input type="messenger" placeholder="Кем выдан *" />
+          <input type="messenger" placeholder="Кем выдан *" name="passport_issued"/>
         </div>
         <div class="input_div class4">
-          <input type="text" placeholder="Дата выдачи *" />
+          <input type="date" placeholder="Дата выдачи *" name="passport_d_issue"/>
         </div>
       </div>
 
@@ -98,19 +101,19 @@
     <div class="general_box">
       <div class="general_itm">
         <div class="input_div class4">
-          <input type="text" placeholder="Город *" />
+          <input type="text" placeholder="Город *" name="registration[city]"/>
         </div>
         <div class="input_div class1">
-            <input type="text" placeholder="Улица *" />
+            <input type="text" placeholder="Улица *" name="registration[street]"/>
           </div>
         <div class="input_div class6">
-          <input type="messenger" placeholder="Дом *" />
+          <input type="messenger" placeholder="Дом *" name="registration[house]"/>
         </div>
         <div class="input_div class6">
-          <input type="text" placeholder="Корпус" />
+          <input type="text" placeholder="Корпус" name="registration[frame]"/>
         </div>
         <div class="input_div class6">
-          <input type="text" placeholder="Кв." />
+          <input type="text" placeholder="Кв." name="registration[quarter]"/>
         </div>
       </div>
 
@@ -129,19 +132,19 @@
     <div class="general_box">
       <div class="general_itm">
         <div class="input_div class4">
-          <input type="text" placeholder="Город *" />
+          <input type="text" placeholder="Город *" name="residence[city]"/>
         </div>
         <div class="input_div class1">
-            <input type="text" placeholder="Улица *" />
+            <input type="text" placeholder="Улица *" name="residence[street]"/>
           </div>
         <div class="input_div class6">
-          <input type="messenger" placeholder="Дом *" />
+          <input type="messenger" placeholder="Дом *" name="residence[house]"/>
         </div>
         <div class="input_div class6">
-          <input type="text" placeholder="Корпус" />
+          <input type="text" placeholder="Корпус" name="residence[frame]"/>
         </div>
         <div class="input_div class6">
-          <input type="text" placeholder="Кв." />
+          <input type="text" placeholder="Кв." name="residence[quarter]"/>
         </div>
       </div>
       <div class="blue_btn">
@@ -150,6 +153,8 @@
     </div>
   </div>
   </section>
+  </form>
+  
 @endsection
 @section('js')
 <script src="{{ asset('js/register.js') }}"></script>

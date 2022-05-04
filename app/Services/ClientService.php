@@ -16,7 +16,7 @@ class ClientService
 
     public function find(int $id)
     {
-        return Client::find($id);
+        return Client::findOrFail($id);
     }
 
     public function store($data)
@@ -28,5 +28,22 @@ class ClientService
         $cl->address()->create($data['residence']);
 
         return $cl;
+    }
+
+    public function storeQuestionnaires($data,$id)
+    {
+       $client = $this->find($id);
+       $quest = $client->questionnaires()->create($data);
+       if(isset($data['questionnaire'])){
+            foreach($data['questionnaire'] as $key => $val){
+                $quest->answers()->create(['purpose_survey' => $key,'answer' => $val]);
+            }
+       }
+
+       if(isset($data['questionnaire2'])){
+        foreach($data['questionnaire2'] as $key => $val){
+            $quest->answers()->create(['purpose_survey' => $key,'answer' => $val,'type' => 2]);
+        }
+   }
     }
 }

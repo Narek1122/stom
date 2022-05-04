@@ -4,6 +4,24 @@
 @if(isset($client))
 <div class="container">
     <div class="card">
+        <div class="text-center">
+            <div class="row">
+                <div class="col-sm">
+                     
+                         <a href="{{route('adminGetQuestionnaire',[$id,1])}}">
+                            Анкета 1
+                         </a>
+                     
+                </div>
+                <div class="col-sm">
+                    
+                        <a href="{{route('adminGetQuestionnaire',[$id,2])}}">
+                            Анкета 2
+                         </a>
+                     
+                </div>
+         </div>
+         </div>
         <div class="text-center bg-primary btn">
             <h1 class="text-white">{{ $client['type'] }}</h1>
          </div>

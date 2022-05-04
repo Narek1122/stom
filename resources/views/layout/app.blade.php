@@ -16,7 +16,7 @@
     <script src="js/yandex_map.js">
     </script>
     @yield('css')    
-    <title>Document</title>
+    <title>Стомалина</title>
 </head>
 <body>
 <div class="slider__2" id="modal">
@@ -45,21 +45,21 @@
     </div>
     <header class="header">
       <nav class="navbar">
-        <a href="#" class="nav_branding"
+        <a href="{{route('welcome')}}" class="nav_branding"
           ><img src="images/logo .png" alt="logo"
         /></a>
         <ul class="nav_menu">
           <li class="nav_item">
-            <a href="#" class="nav_link">Главная</a>
+            <a href="{{route('welcome')}}" class="nav_link">Главная</a>
           </li>
           <li class="nav_item">
-            <a href="#" class="nav_link">Документы</a>
+            <a href="{{route('documents')}}" class="nav_link">Документы</a>
           </li>
           <li class="nav_item">
-            <a href="./box/main.html" class="nav_link">Оснащениие</a>
+            <a href="{{route('equipment')}}" class="nav_link">Оснащениие</a>
           </li>
           <li class="nav_item">
-            <a href="#" class="nav_link">Услуги</a>
+            <a href="{{route('treaty')}}" class="nav_link">Услуги</a>
           </li>
           <li class="nav_item">
             <a href="#" class="nav_link">Команда</a>
@@ -86,7 +86,7 @@
             <p>Принимаем детей и взрослых</p>
             <p>Лечение под наркозом и седацией</p>
             <p>Лечение под микроскопом</p>
-            <button class="btn"><a href="#">Оснащениие</a></button>
+            <button class="btn"><a href="{{route('equipment')}}">Оснащениие</a></button>
           </div>
         </div>
         <div class="slide">
@@ -95,7 +95,7 @@
             <p>Принимаем детей и взрослых</p>
             <p>Лечение под наркозом и седацией</p>
             <p>Лечение под микроскопом</p>
-            <button class="btn"><a href="#">Оснащениие</a></button>
+            <button class="btn"><a href="{{route('equipment')}}">Оснащениие</a></button>
           </div>
         </div>
         <div class="slide">
@@ -104,7 +104,7 @@
             <p>Принимаем детей и взрослых</p>
             <p>Лечение под наркозом и седацией</p>
             <p>Лечение под микроскопом</p>
-            <button class="btn"><a href="#">Оснащениие</a></button>
+            <button class="btn"><a href="{{route('equipment')}}">Оснащениие</a></button>
           </div>
         </div>
         <div class="slide">
@@ -113,7 +113,7 @@
             <p>Принимаем детей и взрослых</p>
             <p>Лечение под наркозом и седацией</p>
             <p>Лечение под микроскопом</p>
-            <button class="btn"><a href="#">Оснащениие</a></button>
+            <button class="btn"><a href="{{route('equipment')}}">Оснащениие</a></button>
           </div>
         </div>
 <div class="a">

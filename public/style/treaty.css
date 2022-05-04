@@ -1,180 +1,181 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 .container {
-  max-width: 1400px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 16px;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  padding: 100px 0;
-}
+
+/* .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0;
+} */
 
 .whole_document {
-  width: 50%;
+    width: 50%;
 }
 
 .text_secondary {
-  width: 50%;
+    width: 50%;
 }
 
 .from_the_visit_text {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .from_the_visit_text p {
-  font-size: 40px;
-  font-weight: bold;
+    font-size: 40px;
+    font-weight: bold;
 }
 
 .text_secondary {
-  display: flex;
+    display: flex;
 }
 
 .yellow {
-  background-color: #ffcb05;
-  width: 101.59px;
-  height: 38.38px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+    background-color: #ffcb05;
+    width: 101.59px;
+    height: 38.38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 .yellow i {
-  font-size: 22px;
-  color: #2f3c48;
+    font-size: 22px;
+    color: #2f3c48;
 }
 
 .yellow_img img {
-  width: 22px;
+    width: 22px;
 }
 
 .box_text p {
-  margin: 4px 0 10px;
-  font-size: 15px;
-  line-height: 1.5;
+    margin: 4px 0 10px;
+    font-size: 15px;
+    line-height: 1.5;
 }
+
 
 /* ----------------------------------------- */
 
 .user_login_div {
-  width: 66%;
-  background-color: #eaf8fc;
+    width: 66%;
+    background-color: #eaf8fc;
 }
 
 .user_login {
-  padding: 20px;
+    padding: 20px;
 }
 
 .user_title {
-  font-size: 22px;
-  margin: 20px 0;
-  font-weight: bold;
+    font-size: 22px;
+    margin: 20px 0;
+    font-weight: bold;
 }
 
 .user_login_box {
-  margin-top: 20px;
-  display: flex;
+    margin-top: 20px;
+    display: flex;
 }
 
 .user_login_input {
-  display: flex;
-  flex-direction: column;
-  background-color: #fff;
-  padding: 20px 25px;
-  margin-right: 20px;
-  border-radius: 15px;
-  margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 20px 25px;
+    margin-right: 20px;
+    border-radius: 15px;
+    margin-bottom: 15px;
 }
 
 .user_login_input input {
-  border: hidden;
-  outline: none;
+    border: hidden;
+    outline: none;
 }
 
 .user_login_input label {
-  color: rgba(0, 0, 0, 0.54);
+    color: rgba(0, 0, 0, 0.54);
 }
+
+
 /* -------------------------- */
 
 .user_login_input_2 {
-  width: 462px;
+    width: 462px;
 }
 
 .user_chckbox {
-  margin: 20px 0;
-  display: flex;
-  align-items: center;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
 }
 
 .user_chckbox input {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-  cursor: pointer;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
 }
 
+
 /* --------- */
+
 .user_btn {
-  margin-top: 50px;
-  padding: 17px 30px;
-  background-color: #4fc6e0;
-  border: none;
-  color: #fff;
-  font-size: 22px;
-  border-radius: 40px;
-  cursor: pointer;
-  transition: 0.3s;
+    margin-top: 50px;
+    padding: 17px 30px;
+    background-color: #4fc6e0;
+    border: none;
+    color: #fff;
+    font-size: 22px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .user_btn:hover {
-  background-color: #fff;
-  color: #4fc6e0;
+    background-color: #fff;
+    color: #4fc6e0;
 }
 
 @media (max-width: 1200px) {
-  .user_login_input {
-    padding: 10px 15px;
-    width: 100%;
-  }
-
-  .user_login_box {
-    display: block;
-  }
-
-  .user_login_input_2 {
-    width: 100%;
-  }
-
-  .header {
-    display: block;
-  }
+    .user_login_input {
+        padding: 10px 15px;
+        width: 100%;
+    }
+    .user_login_box {
+        display: block;
+    }
+    .user_login_input_2 {
+        width: 100%;
+    }
+    .header {
+        display: block;
+    }
 }
 
 @media (max-width: 991px) {
-  .whole_document {
-    width: 100%;
-  }
-  .from_the_visit_text p {
-    font-size: 26px;
-    display: inline-block;
-  }
-
-  .box_text {
-    width: 100%;
-  }
-  .user_login_div{
-      width: 100%;
-  }
- 
+    .whole_document {
+        width: 100%;
+    }
+    .from_the_visit_text p {
+        font-size: 26px;
+        display: inline-block;
+    }
+    .box_text {
+        width: 100%;
+    }
+    .user_login_div {
+        width: 100%;
+    }
 }
