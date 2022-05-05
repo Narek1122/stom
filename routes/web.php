@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Client\ClientController;
 use App\Http\Controllers\Client\QuestionnaireController;
+use App\Http\Controllers\Client\FileController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -57,6 +58,10 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
     Route::resource('client', ClientController::class)->except(['store']);
     Route::get('client/questionnaire/{id}/{num}',[QuestionnaireController::class,'getQuest'])->name('adminGetQuestionnaire')->where('id', '[0-9]+')->where('num', '[0-9]+');
+    Route::prefix('client/files')->group(function () {
+        Route::get('/get_word',[FileController::class,'getWord']);
+       
+    });
 });
 
 Route::resource('client', ClientController::class)->only('store');

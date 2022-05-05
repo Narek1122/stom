@@ -53,6 +53,11 @@ class QuestionnaireController extends Controller
         ->with(['answers' =>function($q) use ($num){
             return $q->where('type',$num);
         }])->get();
+
+        // $pw = new \PhpOffice\PhpWord\PhpWord();
+        // $section = $pw->addSection();
+        // \PhpOffice\PhpWord\Shared\Html::addHtml($section,$view, false, false);
+        // $pw->save("files/test/test.docx", "Word2007");
         
         return view('admin.client.questionnaire.questionnaire' . $num,compact('quest'));
     }
